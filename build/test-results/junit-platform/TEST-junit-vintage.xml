@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Vintage" tests="27" skipped="0" failures="0" errors="0" time="0.049" hostname="Valeri-pc" timestamp="2017-09-04T22:42:59">
+<properties>
+<property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+<property name="file.encoding" value="windows-1251"/>
+<property name="file.encoding.pkg" value="sun.io"/>
+<property name="file.separator" value="\"/>
+<property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+<property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+<property name="java.class.path" value="C:\Users\valeri\Git\CV\ggf\build\classes\java\test;C:\Users\valeri\Git\CV\ggf\build\resources\test;C:\Users\valeri\Git\CV\ggf\build\classes\java\main;C:\Users\valeri\Git\CV\ggf\build\resources\main;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-engine\5.0.0-M4\10e0dc41a4e9c1817c2b729c3a7c48b1ddfed17\junit-jupiter-engine-5.0.0-M4.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.0.0-M4\50f95d68c674a30374c5f50e6ad5212d2c1a3cec\junit-jupiter-api-5.0.0-M4.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.vintage\junit-vintage-engine\4.12.0-M4\b74455e014bb82c6a83dcab849ec169f68978109\junit-vintage-engine-4.12.0-M4.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\junit\junit\4.12\2973d150c0dc1fefe998f834810d68f278ea58ec\junit-4.12.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.6.2\a91369f655eb1639c6aece5c5eb5108db18306\log4j-core-2.6.2.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-jul\2.6.2\afb8205d03d7f30405b385a2b0fdf1086bc9bc2a\log4j-jul-2.6.2.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-engine\1.0.0-M4\5e65bdd2d623dfc6a405911a6449f2c60808b0af\junit-platform-engine-1.0.0-M4.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.0.0-M2\e2caa64702a83336d3dd32c7f69c1f092156df6d\opentest4j-1.0.0-M2.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.0.0-M4\359eb461814bd7356de541d131d45473d394a168\junit-platform-commons-1.0.0-M4.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.6.2\bd1b74a5d170686362091c7cf596bbc3adf5c09b\log4j-api-2.6.2.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-console\1.0.0-M4\82da9da502b1fe187bed5f5152746696aad19fae\junit-platform-console-1.0.0-M4.jar;C:\Users\valeri\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-launcher\1.0.0-M4\d4e3657bc7cf204d6b9b55f0387fedc6eaad55fa\junit-platform-launcher-1.0.0-M4.jar"/>
+<property name="java.class.version" value="52.0"/>
+<property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\endorsed"/>
+<property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+<property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_73\jre"/>
+<property name="java.io.tmpdir" value="C:\Users\valeri\AppData\Local\Temp\"/>
+<property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_73\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\valeri\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\valeri\bin;C:\Gradle\gradle-4.1\bin;C:\Program Files (x86)\Java\jdk1.8.0_73\bin;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Skype\Phone;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Git\cmd;C:\Users\valeri\AppData\Local\Microsoft\WindowsApps;C:\Gradle\gradle-4.1\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+<property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+<property name="java.runtime.version" value="1.8.0_73-b02"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="1.8"/>
+<property name="java.util.logging.manager" value="org.apache.logging.log4j.jul.LogManager"/>
+<property name="java.vendor" value="Oracle Corporation"/>
+<property name="java.vendor.url" value="http://java.oracle.com/"/>
+<property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+<property name="java.version" value="1.8.0_73"/>
+<property name="java.vm.info" value="mixed mode"/>
+<property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="1.8"/>
+<property name="java.vm.vendor" value="Oracle Corporation"/>
+<property name="java.vm.version" value="25.73-b02"/>
+<property name="line.separator" value="
+"/>
+<property name="os.arch" value="x86"/>
+<property name="os.name" value="Windows 10"/>
+<property name="os.version" value="10.0"/>
+<property name="path.separator" value=";"/>
+<property name="sun.arch.data.model" value="32"/>
+<property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_73\jre\classes"/>
+<property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_73\jre\bin"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+<property name="sun.desktop" value="windows"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --details NONE --scan-class-path C:\Users\valeri\Git\CV\ggf\build\classes\java\main;C:\Users\valeri\Git\CV\ggf\build\resources\main;C:\Users\valeri\Git\CV\ggf\build\classes\java\test;C:\Users\valeri\Git\CV\ggf\build\resources\test -n ^.*Tests?$ -T slow --reports-dir C:\Users\valeri\Git\CV\ggf\build\test-results\junit-platform"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="Cp1251"/>
+<property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+<property name="sun.os.patch.level" value=""/>
+<property name="user.country" value="US"/>
+<property name="user.dir" value="C:\Users\valeri\Git\CV\ggf"/>
+<property name="user.home" value="C:\Users\valeri"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="valeri"/>
+<property name="user.script" value=""/>
+<property name="user.timezone" value="Europe/Helsinki"/>
+<property name="user.variant" value=""/>
+</properties>
+<testcase name="compareToBigger" classname="card.BeloteCardTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.BeloteCardTest]/[test:compareToBigger(card.BeloteCardTest)]
+display-name: compareToBigger
+]]></system-out>
+</testcase>
+<testcase name="compareToEqual" classname="card.BeloteCardTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.BeloteCardTest]/[test:compareToEqual(card.BeloteCardTest)]
+display-name: compareToEqual
+]]></system-out>
+</testcase>
+<testcase name="compareToSmaller" classname="card.BeloteCardTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.BeloteCardTest]/[test:compareToSmaller(card.BeloteCardTest)]
+display-name: compareToSmaller
+]]></system-out>
+</testcase>
+<testcase name="getNormalCardNotNull" classname="card.CardTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.CardTest]/[test:getNormalCardNotNull(card.CardTest)]
+display-name: getNormalCardNotNull
+]]></system-out>
+</testcase>
+<testcase name="getBeloteCardNotNull" classname="card.CardTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.CardTest]/[test:getBeloteCardNotNull(card.CardTest)]
+display-name: getBeloteCardNotNull
+]]></system-out>
+</testcase>
+<testcase name="dealCardsCorrectNumberOfCards" classname="card.DeckTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.DeckTest]/[test:dealCardsCorrectNumberOfCards(card.DeckTest)]
+display-name: dealCardsCorrectNumberOfCards
+]]></system-out>
+</testcase>
+<testcase name="dealCardsNotNull" classname="card.DeckTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:card.DeckTest]/[test:dealCardsNotNull(card.DeckTest)]
+display-name: dealCardsNotNull
+]]></system-out>
+</testcase>
+<testcase name="getBidExpected" classname="game.GameTest" time="0.008">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.GameTest]/[test:getBidExpected(game.GameTest)]
+display-name: getBidExpected
+]]></system-out>
+</testcase>
+<testcase name="getBidNotNull" classname="game.GameTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.GameTest]/[test:getBidNotNull(game.GameTest)]
+display-name: getBidNotNull
+]]></system-out>
+</testcase>
+<testcase name="playNotNull" classname="game.GameTest" time="0.006">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.GameTest]/[test:playNotNull(game.GameTest)]
+display-name: playNotNull
+]]></system-out>
+</testcase>
+<testcase name="getPlayerToBid" classname="game.RoundTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.RoundTest]/[test:getPlayerToBid(game.RoundTest)]
+display-name: getPlayerToBid
+]]></system-out>
+</testcase>
+<testcase name="play" classname="game.RoundTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.RoundTest]/[test:play(game.RoundTest)]
+display-name: play
+]]></system-out>
+</testcase>
+<testcase name="playNotNull" classname="game.RoundTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.RoundTest]/[test:playNotNull(game.RoundTest)]
+display-name: playNotNull
+]]></system-out>
+</testcase>
+<testcase name="getPlayerToBidReverse" classname="game.RoundTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:game.RoundTest]/[test:getPlayerToBidReverse(game.RoundTest)]
+display-name: getPlayerToBidReverse
+]]></system-out>
+</testcase>
+<testcase name="getCardNotNull" classname="player.GameTypeTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.GameTypeTest]/[test:getCardNotNull(player.GameTypeTest)]
+display-name: getCardNotNull
+]]></system-out>
+</testcase>
+<testcase name="getBeloteCard" classname="player.GameTypeTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.GameTypeTest]/[test:getBeloteCard(player.GameTypeTest)]
+display-name: getBeloteCard
+]]></system-out>
+</testcase>
+<testcase name="sumHand" classname="player.HandTypeTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.HandTypeTest]/[test:sumHand(player.HandTypeTest)]
+display-name: sumHand
+]]></system-out>
+</testcase>
+<testcase name="getHand" classname="player.HandTypeTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.HandTypeTest]/[test:getHand(player.HandTypeTest)]
+display-name: getHand
+]]></system-out>
+</testcase>
+<testcase name="getHandNotNull" classname="player.HandTypeTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.HandTypeTest]/[test:getHandNotNull(player.HandTypeTest)]
+display-name: getHandNotNull
+]]></system-out>
+</testcase>
+<testcase name="playCardNotNull" classname="player.playerType.ComputerPlayerTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:playCardNotNull(player.playerType.ComputerPlayerTest)]
+display-name: playCardNotNull
+]]></system-out>
+</testcase>
+<testcase name="callDeclarationNotNull" classname="player.playerType.ComputerPlayerTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:callDeclarationNotNull(player.playerType.ComputerPlayerTest)]
+display-name: callDeclarationNotNull
+]]></system-out>
+</testcase>
+<testcase name="playCardForSuit" classname="player.playerType.ComputerPlayerTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:playCardForSuit(player.playerType.ComputerPlayerTest)]
+display-name: playCardForSuit
+]]></system-out>
+</testcase>
+<testcase name="callBidNotNull" classname="player.playerType.ComputerPlayerTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:callBidNotNull(player.playerType.ComputerPlayerTest)]
+display-name: callBidNotNull
+]]></system-out>
+</testcase>
+<testcase name="callDeclaration" classname="player.playerType.ComputerPlayerTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:callDeclaration(player.playerType.ComputerPlayerTest)]
+display-name: callDeclaration
+]]></system-out>
+</testcase>
+<testcase name="callBid" classname="player.playerType.ComputerPlayerTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:callBid(player.playerType.ComputerPlayerTest)]
+display-name: callBid
+]]></system-out>
+</testcase>
+<testcase name="playCardForNoTrump" classname="player.playerType.ComputerPlayerTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:playCardForNoTrump(player.playerType.ComputerPlayerTest)]
+display-name: playCardForNoTrump
+]]></system-out>
+</testcase>
+<testcase name="playCardForAllTrump" classname="player.playerType.ComputerPlayerTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]/[runner:player.playerType.ComputerPlayerTest]/[test:playCardForAllTrump(player.playerType.ComputerPlayerTest)]
+display-name: playCardForAllTrump
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-vintage]
+display-name: JUnit Vintage
+]]></system-out>
+</testsuite>
