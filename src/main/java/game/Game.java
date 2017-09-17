@@ -14,7 +14,7 @@ import java.util.List;
  * This class represents a single game in belote game
  * Created by valeri on 5.8.2017 г..
  */
-public class Game {
+public final class Game {
 
     private final Round round;
 

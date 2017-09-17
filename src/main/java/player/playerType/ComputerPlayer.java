@@ -32,7 +32,7 @@ public final class ComputerPlayer extends Player {
         for (int count = 0; count < BidType.allBids.length; count++) {
             Bid bidCheck = new Bid(BidType.allBids[count], bid.getCounter(), this);
             int currentBidSum = HandType.sumHandPoints(HandType.getBeloteHand(super.getHand(), bidCheck));
-            if (currentBidSum > BID_MIN && bidCheck.getBid().getBidPower() > currentBid.getBid().getBidPower()) {
+            if (currentBidSum > BID_MIN && bidCheck.getBid().getBidPower() >= currentBid.getBid().getBidPower()) {
 
                 counter = (BidType.allBids[count].equals(bidCheck) && bid.getCounter() < MAX_COUNTER)
                         ? counter *= 2 : 1;
