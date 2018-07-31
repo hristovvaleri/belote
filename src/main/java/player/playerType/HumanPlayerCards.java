@@ -38,7 +38,7 @@ public final class HumanPlayerCards {
         assert bid != null;
 
         List<Card> cards = null;
-        if (Arrays.asList(BidType.suitBids).contains(bid.getBid())) {
+        if (Arrays.asList(BidType.SUIT_BIDS).contains(bid.getBid())) {
             cards = suit(winningCard, bid);
         } else if (bid.getBid().equals(BidType.ALL_TRUMP)) {
             cards = trump(winningCard);
@@ -103,8 +103,8 @@ public final class HumanPlayerCards {
         assert bid != null;
         assert playedCard != null;
 
-        return !currentCard.getNormalCard().getSuit().equals(playedCard.getNormalCard().getSuit())
-                && !currentCard.getNormalCard().getSuit().name().matches(bid.getBid().name());
+        return !currentCard.getCardSuit().equals(playedCard.getCardSuit())
+                && !currentCard.getCardSuit().name().equals(bid.getBid().name());
     }
 
     private List<Card> suitRaise(Card playedCard, Bid bid) {
@@ -114,7 +114,7 @@ public final class HumanPlayerCards {
         List<Card> cards = new ArrayList<>();
         for (Card currentCard : humanPlayer.getHand()) {
 
-            if (bid.getBid().name().matches(currentCard.getNormalCard().getSuit().name())) {
+            if (bid.getBid().name().equals(currentCard.getCardSuit().name())) {
                 cards.add(currentCard);
             }
         }

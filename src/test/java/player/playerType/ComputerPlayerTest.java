@@ -26,7 +26,7 @@ public class ComputerPlayerTest {
     private final static int RANDOM_NUMBER = 5;
 
     @Test
-    public void callBidNotNull() throws Exception {
+    public void callBidNotNull() {
         List<Card> hand = new ArrayList<>();
 
         Card card = generateCard(Suit.CLUBS, Value.ACE, 11);
@@ -40,7 +40,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void callBid() throws Exception {
+    public void callBidIsValid() {
         List<Card> hand = new ArrayList<>();
 
         Card card = generateCard(Suit.CLUBS, Value.ACE, 11);
@@ -54,7 +54,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void callDeclarationNotNull() throws Exception {
+    public void callDeclarationNotNull() {
         List<Card> hand = generateCards();
         ComputerPlayer computerPlayer = new ComputerPlayer(new Team(0), hand, "Test");
         assertNotNull(computerPlayer.callDeclaration(null, null));
@@ -62,7 +62,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void callDeclaration() throws Exception {
+    public void callDeclaration() {
         List<Card> hand = generateCards();
         ComputerPlayer computerPlayer = new ComputerPlayer(new Team(0), hand, "Test");
         List<Declaration> declarations = new ArrayList<>();
@@ -72,7 +72,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void playCardNotNull() throws Exception {
+    public void playCardNotNull() {
         List<Card> hand = new ArrayList<>();
         Card expected = generateCard(Suit.CLUBS, Value.ACE, 11);
         hand.addAll(getKingAndQueen(Suit.CLUBS));
@@ -84,7 +84,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void playCardForAllTrump() throws Exception {
+    public void playCardForAllTrump() {
         List<Card> hand = new ArrayList<>();
         Card expected = generateCard(Suit.CLUBS, Value.ACE, 11);
         hand.addAll(getKingAndQueen(Suit.CLUBS));
@@ -96,7 +96,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void playCardForNoTrump() throws Exception {
+    public void playCardForNoTrump() {
         List<Card> hand = new ArrayList<>();
         Card expected = generateCard(Suit.CLUBS, Value.EIGHT, 0);
         hand.addAll(getKingAndQueen(Suit.SPADES));
@@ -108,7 +108,7 @@ public class ComputerPlayerTest {
     }
 
     @Test
-    public void playCardForSuit() throws Exception {
+    public void playCardForSuit() {
         List<Card> hand = new ArrayList<>();
         Card expected = generateCard(Suit.CLUBS, Value.ACE, 11);
         hand.add(expected);

@@ -24,20 +24,20 @@ public final class Belote {
         assert winningCard != null;
         assert playedCard != null;
 
-        boolean state = false;
-        if (winningCard.getNormalCard().getSuit().equals(playedCard.getNormalCard().getSuit()) &&
-                Arrays.asList(QUEEN_KING).contains(playedCard.getNormalCard().getValue())) {
+        boolean isBelote = false;
+        if (winningCard.getCardSuit().equals(playedCard.getCardSuit()) &&
+                Arrays.asList(QUEEN_KING).contains(playedCard.getCardValue())) {
 
             for (Card currentCard : hand) {
-                if (currentCard.getNormalCard().getSuit().equals(playedCard.getNormalCard().getSuit()) &&
+                if (currentCard.getCardSuit().equals(playedCard.getCardSuit()) &&
                         Arrays.asList(QUEEN_KING).contains(currentCard)) {
 
-                    state = true;
+                    isBelote = true;
                     break;
                 }
             }
         }
 
-        return state;
+        return isBelote;
     }
 }

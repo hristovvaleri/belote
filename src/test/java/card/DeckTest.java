@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
  */
 public class DeckTest {
     @Test
-    public void dealCardsNotNull() throws Exception {
+    public void dealCardsNotNull() {
         Deck deck = new Deck();
         List<Card> hand = new ArrayList<>();
         deck.dealCards(hand);
@@ -18,7 +18,7 @@ public class DeckTest {
     }
 
     @Test
-    public void dealCardsCorrectNumberOfCards() throws Exception {
+    public void dealCardsCorrectNumberOfCards() {
         Deck deck = new Deck();
         List<Card> hand = new ArrayList<>();
         deck.dealCards(hand);

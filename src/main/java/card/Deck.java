@@ -43,7 +43,7 @@ public final class Deck {
             deal2Cards(hand);
         }
 
-        assert invariant(hand);
+        assert isHandValid(hand);
     }
 
     private void deal3Cards(List<Card> hand) {
@@ -53,7 +53,7 @@ public final class Deck {
             hand.add(getFromDeck());
         }
 
-        assert invariant(hand);
+        assert isHandValid(hand);
     }
 
     private void deal2Cards(List<Card> hand) {
@@ -62,7 +62,7 @@ public final class Deck {
             hand.add(getFromDeck());
         }
 
-        assert invariant(hand);
+        assert isHandValid(hand);
     }
 
 
@@ -78,7 +78,7 @@ public final class Deck {
         return card;
     }
 
-    private boolean invariant(List<Card> hand) {
+    private boolean isHandValid(List<Card> hand) {
         assert hand != null;
 
         boolean state = true;
@@ -93,10 +93,10 @@ public final class Deck {
     }
 
     public void split() {
-        assert invariant(deck);
+        assert isHandValid(deck);
 
         Collections.shuffle(deck);
 
-        assert invariant(deck);
+        assert isHandValid(deck);
     }
 }

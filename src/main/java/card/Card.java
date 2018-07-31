@@ -10,7 +10,6 @@ public final class Card {
     private final NormalCard normalCard;
 
     /**
-     *
      * @param beloteCard should not be null
      * @param normalCard should not be null
      */
@@ -23,7 +22,6 @@ public final class Card {
     }
 
     /**
-     *
      * @return the current belote card
      */
     public BeloteCard getBeloteCard() {
@@ -31,7 +29,6 @@ public final class Card {
     }
 
     /**
-     *
      * @return the current normal card
      */
     public NormalCard getNormalCard() {
@@ -39,10 +36,23 @@ public final class Card {
     }
 
     /**
-     *
+     * @return the current card suit
+     */
+    public Suit getCardSuit() {
+        return normalCard.getSuit();
+    }
+
+    /**
+     * @return the current card value
+     */
+    public Value getCardValue() {
+        return beloteCard.getValue();
+    }
+
+    /**
      * @return the card information
      */
-    public String toString(){
+    public String toString() {
         StringBuilder output = new StringBuilder();
 
         output.append(normalCard.toString());

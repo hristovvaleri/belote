@@ -17,7 +17,7 @@ import card.BeloteWeight;
  */
 public class HandTypeTest {
     @Test
-    public void sumHand() throws Exception {
+    public void sumHand() {
         List<Card> hand = new ArrayList<>();
         hand.addAll(getHandWithOneCard(Suit.CLUBS, Value.ACE, 11));
         hand.addAll(getHandWithOneCard(Suit.DIAMONDS, Value.NINE, 14));
@@ -25,14 +25,14 @@ public class HandTypeTest {
     }
 
     @Test
-    public void getHandNotNull() throws Exception {
+    public void getHandNotNull() {
         List<Card> hand = getHandWithOneCard(Suit.CLUBS, Value.ACE, 11);
         Bid bid = new Bid(BidType.ALL_TRUMP, 1, new HumanPlayer(new Team(1), hand, "Test"));
         assertNotNull(HandType.getBeloteHand(hand, bid).get(0));
     }
 
     @Test
-    public void getHand() throws Exception {
+    public void getHand() {
         List<Card> hand = getHandWithOneCard(Suit.CLUBS, Value.ACE, 11);
         Bid bid = new Bid(BidType.ALL_TRUMP, 1, new HumanPlayer(new Team(1), hand, "Test"));
         assertEquals(11, HandType.getBeloteHand(hand, bid).get(0).getBeloteCard().getWeight().getCardWeight());

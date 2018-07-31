@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class GameTest {
     @Test
-    public void playNotNull() throws Exception {
+    public void playNotNull() {
         Deck deck = new Deck();
 
         List<Player> players = getPlayers();
@@ -32,7 +32,7 @@ public class GameTest {
     }
 
     @Test
-    public void getBidNotNull() throws Exception {
+    public void getBidNotNull() {
         List<Player> players = getPlayers();
         Round round = new Round(players);
 
@@ -41,7 +41,7 @@ public class GameTest {
     }
 
     @Test
-    public void getBidExpected() throws Exception {
+    public void getBidExpected() {
         List<Player> players = getPlayers();
         Round round = new Round(players);
 

@@ -6,6 +6,7 @@ import card.Value;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -32,8 +33,8 @@ public final class Carre {
 
             handCopy = getSameCards(handCopy, currentCard);
             if (handCopy.size() == CARRE) {
-                carre.add(determineCarre(currentCard));
-                carre.remove(null);
+                Optional<Declaration> declaration = determineCarre(currentCard);
+                declaration.ifPresent(carre::add);
             }
             handCopy = removeCheckedCards(handCopy, currentCard);
         }
@@ -46,7 +47,7 @@ public final class Carre {
         assert currentCard != null;
 
         return hand.stream().
-                filter(card -> card.getNormalCard().getValue().equals(currentCard.getNormalCard().getValue()))
+                filter(card -> card.getCardValue().equals(currentCard.getCardValue()))
                 .collect(Collectors.toList());
     }
 
@@ -55,11 +56,11 @@ public final class Carre {
         assert currentCard != null;
 
         return hand.stream().
-                filter(card -> !card.getNormalCard().getValue().equals(currentCard.getNormalCard().getValue()))
+                filter(card -> !card.getCardValue().equals(currentCard.getCardValue()))
                 .collect(Collectors.toList());
     }
 
-    private static Declaration determineCarre(Card card) {
+    private static Optional<Declaration> determineCarre(Card card) {
         assert card != null;
 
         Declaration carreEnum = null;
@@ -72,7 +73,7 @@ public final class Carre {
             carreEnum = Declaration.HUNDREDS_CARRE;
         }
 
-        return carreEnum;
+        return Optional.ofNullable(carreEnum);
     }
 
 

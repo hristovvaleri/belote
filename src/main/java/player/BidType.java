@@ -15,8 +15,8 @@ public enum BidType {
 
     private final int bidPower;
 
-    public final static BidType allBids[] = {PASS, CLUBS, DIAMONDS, HEARTS, SPADES, NO_TRUMP, ALL_TRUMP};
-    public final static BidType suitBids[] = {CLUBS, DIAMONDS, HEARTS, SPADES};
+    public final static BidType ALL_BIDS[] = {PASS, CLUBS, DIAMONDS, HEARTS, SPADES, NO_TRUMP, ALL_TRUMP};
+    public final static BidType SUIT_BIDS[] = {CLUBS, DIAMONDS, HEARTS, SPADES};
 
     private final static int MIN_VALUE = 0;
     private final static int MAX_VALUE = 6;

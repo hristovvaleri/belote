@@ -69,7 +69,6 @@ public enum Declaration {
         assert hand != null;
 
         List<Declaration> declarations = new ArrayList<>();
-        List<Declaration> currentDeclaration;
         if (hand.size() == MAX_HAND_SIZE) {
             declarations.addAll(getDeclarations(hand));
         } else {

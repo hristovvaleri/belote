@@ -20,7 +20,7 @@ import card.BeloteWeight;
  */
 public class GameTypeTest {
     @Test
-    public void getBeloteCard() throws Exception {
+    public void getBeloteCard() {
         List<Card> hand = new ArrayList<>();
 
         Card winningCard = generateCard(Suit.CLUBS,Value.ACE,11);
@@ -31,7 +31,7 @@ public class GameTypeTest {
     }
 
     @Test
-    public void getCardNotNull() throws Exception {
+    public void getCardNotNull() {
         List<Card> hand = new ArrayList<>();
 
         Card winningCard = generateCard(Suit.CLUBS,Value.ACE,11);

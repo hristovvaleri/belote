@@ -1,7 +1,6 @@
 package player;
 
 import card.Card;
-import declaration.Declaration;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +23,7 @@ public final class GameType {
         assert bid != null;
 
         Card playedCard = null;
-        if (Arrays.asList(BidType.suitBids).contains(bid.getBid())) {
+        if (Arrays.asList(BidType.SUIT_BIDS).contains(bid.getBid())) {
             playedCard = suit(hand, winningCard, bid);
         } else if (bid.getBid().equals(BidType.ALL_TRUMP)) {
             playedCard = trump(hand, winningCard);
@@ -95,8 +94,8 @@ public final class GameType {
         assert bid != null;
         assert playedCard != null;
 
-        return !currentCard.getNormalCard().getSuit().equals(playedCard.getNormalCard().getSuit())
-                && !currentCard.getNormalCard().getSuit().name().matches(bid.getBid().name());
+        return !currentCard.getCardSuit().equals(playedCard.getCardSuit())
+                && !currentCard.getCardSuit().name().equals(bid.getBid().name());
     }
 
     private static Card suitRaise(List<Card> hand, Card playedCard, Bid bid) {
@@ -106,7 +105,7 @@ public final class GameType {
 
         for (Card currentCard : hand) {
 
-            if (bid.getBid().name().matches(currentCard.getNormalCard().getSuit().name())) {
+            if (bid.getBid().name().equals(currentCard.getCardSuit().name())) {
                 playedCard = currentCard;
                 break;
             }

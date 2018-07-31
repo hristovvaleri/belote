@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
  */
 public class BeloteCardTest {
     @Test
-    public void compareToSmaller() throws Exception {
+    public void compareToSmaller() {
         NormalCard firstNormalCard = new NormalCard(Suit.CLUBS,Value.SEVEN);
         BeloteWeight firstBeloteWeight = new BeloteWeight(14);
         NormalCard secondNormalCard = new NormalCard(Suit.CLUBS,Value.ACE);
@@ -20,7 +20,7 @@ public class BeloteCardTest {
     }
 
     @Test
-    public void compareToBigger() throws Exception {
+    public void compareToBigger() {
         NormalCard firstNormalCard = new NormalCard(Suit.CLUBS,Value.SEVEN);
         BeloteWeight firtBelobeWeight = new BeloteWeight(16);
         NormalCard secondNormalCard = new NormalCard(Suit.CLUBS,Value.ACE);
@@ -32,7 +32,7 @@ public class BeloteCardTest {
     }
 
     @Test
-    public void compareToEqual() throws Exception {
+    public void compareToEqual() {
         NormalCard firstNormalCard = new NormalCard(Suit.CLUBS,Value.SEVEN);
         BeloteWeight firtBelobeWeight = new BeloteWeight(15);
         NormalCard secondNormalCard = new NormalCard(Suit.CLUBS,Value.ACE);

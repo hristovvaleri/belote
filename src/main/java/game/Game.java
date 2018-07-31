@@ -98,8 +98,7 @@ public final class Game {
             assert currentPlayer.getHand() != null;
         }
 
-        assert bid != null;
-        assert invariant(round.getPlayers());
+        assert checkPlayersHands(round.getPlayers());
     }
 
     /**
@@ -112,7 +111,7 @@ public final class Game {
             currentPlayer.getHand().clear();
         }
 
-        assert invariant(players);
+        assert checkPlayersHands(players);
     }
 
     private static List<Card> getCardValues(List<Card> hand, Bid bid) {
@@ -125,7 +124,7 @@ public final class Game {
         return HandType.getBeloteHand(handCopy, bid);
     }
 
-    private static boolean invariant(List<Player> players) {
+    private static boolean checkPlayersHands(List<Player> players) {
         assert players != null;
 
         boolean state = true;

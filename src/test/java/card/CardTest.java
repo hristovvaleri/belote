@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
  */
 public class CardTest {
     @Test
-    public void getBeloteCardNotNull() throws Exception {
+    public void getBeloteCardNotNull() {
         NormalCard normalCard = new NormalCard(Suit.CLUBS, Value.ACE);
         BeloteCard beloteCard = new BeloteCard(normalCard, new BeloteWeight(11));
         Card card = new Card(beloteCard, normalCard);
@@ -17,7 +17,7 @@ public class CardTest {
 
 
     @Test
-    public void getNormalCardNotNull() throws Exception {
+    public void getNormalCardNotNull() {
         NormalCard normalCard = new NormalCard(Suit.CLUBS, Value.ACE);
         BeloteCard beloteCard = new BeloteCard(normalCard, new BeloteWeight(11));
         Card card = new Card(beloteCard, normalCard);

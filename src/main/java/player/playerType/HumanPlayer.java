@@ -5,7 +5,6 @@ import declaration.Declaration;
 import player.Player;
 import player.BidType;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,14 +32,14 @@ public final class HumanPlayer extends Player {
 
         Output.display("Current bid is: " + bid.getBid().name() + " counter is: " + bid.getCounter());
         Output.display("Your cards are: " + System.lineSeparator() + super.getHand().toString());
-        Output.display("Choose a bid" + System.lineSeparator() + Arrays.toString(BidType.allBids));
+        Output.display("Choose a bid" + System.lineSeparator() + Arrays.toString(BidType.ALL_BIDS));
 
         int choice;
         do {
             choice = Input.getInput();
-        } while (!isTrue(choice, bid));
+        } while (!isBidValid(choice, bid));
 
-        BidType currentBid = BidType.allBids[choice];
+        BidType currentBid = BidType.ALL_BIDS[choice];
         Output.display("Choose counter");
         do {
             choice = Input.getInput();
@@ -90,7 +89,7 @@ public final class HumanPlayer extends Player {
         int choice;
         do {
             choice = Input.getInput();
-        } while (choice < 0 && choice < cardsCanPlay.size());
+        } while (choice < 0);
 
         playedCard = cardsCanPlay.get(choice);
         super.getHand().remove(playedCard);
@@ -112,10 +111,10 @@ public final class HumanPlayer extends Player {
         return cardsCanPlay;
     }
 
-    private static boolean isTrue(int choice, Bid bid) {
+    private boolean isBidValid(int choice, Bid bid) {
         assert bid != null;
 
-        return choice == 0 || (choice > bid.getBid().getBidPower() && choice < BidType.allBids.length);
+        return choice == 0 || (choice > bid.getBid().getBidPower() && choice < BidType.ALL_BIDS.length);
     }
 
 }

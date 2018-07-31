@@ -79,8 +79,9 @@ public final class BeloteCardGame {
                 Output.display("Choose player");
                 choice = Input.getInput();
             } while (choice != 0 && choice != 1);
-            Player player = choice == 0 ? new HumanPlayer(new Team(count % 2), new ArrayList<>(), "Player " + count)
-                    : new ComputerPlayer(new Team(count % 2), new ArrayList<>(), "Player " + count);
+            Player player = choice == 0 ?
+                    new HumanPlayer(new Team(count % 2), new ArrayList<>(), "Player " + count) :
+                    new ComputerPlayer(new Team(count % 2), new ArrayList<>(), "Player " + count);
             players.add(player);
         }
 

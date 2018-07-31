@@ -1,8 +1,6 @@
 package declaration;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import card.Card;
 
@@ -14,9 +12,9 @@ import java.util.stream.Collectors;
  */
 public final class Sequence {
 
-    private final static int tierce = 3;
-    private final static int fifties = 4;
-    private final static int hundreds = 5;
+    private final static int TIERCE = 3;
+    private final static int FIFTIES = 4;
+    private final static int HUNDREDS = 5;
 
     /**
      * @param hand should not be null
@@ -28,14 +26,14 @@ public final class Sequence {
         List<Declaration> sequence = new ArrayList<>();
 
         List<Card> handCopy = new ArrayList<>(hand);
-        Collections.sort(handCopy, (cardOne, cardTwo) -> cardOne.getBeloteCard().compareTo(cardTwo.getBeloteCard()));
+        Collections.sort(handCopy, Comparator.comparing(Card::getBeloteCard));
 
         for (Card currentCard : handCopy) {
             handCopy = getSameSuitCards(handCopy, currentCard);
 
-            if (handCopy.size() >= tierce) {
-                sequence.add(determineSequence(handCopy.size()));
-                sequence.remove(null);
+            if (handCopy.size() >= TIERCE) {
+                Optional<Declaration> declaration = determineSequence(handCopy.size());
+                declaration.ifPresent(sequence::add);
             }
 
             handCopy = removeCheckedCards(hand, currentCard);
@@ -49,7 +47,7 @@ public final class Sequence {
         assert currentCard != null;
 
         return hand.stream().
-                filter(card -> card.getNormalCard().getSuit().equals(currentCard.getNormalCard().getSuit()))
+                filter(card -> card.getCardSuit().equals(currentCard.getCardSuit()))
                 .collect(Collectors.toList());
     }
 
@@ -57,21 +55,21 @@ public final class Sequence {
         assert hand != null;
         assert currentCard != null;
 
-        return hand.stream().filter(card -> !card.getNormalCard().getSuit().equals(currentCard.getNormalCard().getSuit()))
+        return hand.stream().filter(card -> !card.getCardSuit().equals(currentCard.getCardSuit()))
                 .collect(Collectors.toList());
     }
 
-    private static Declaration determineSequence(int equalSuitNumber) {
+    private static Optional<Declaration> determineSequence(int equalSuitNumber) {
         Declaration sequence = null;
 
-        if (equalSuitNumber == tierce) {
+        if (equalSuitNumber == TIERCE) {
             sequence = Declaration.TIERCE;
-        } else if (equalSuitNumber == fifties) {
+        } else if (equalSuitNumber == FIFTIES) {
             sequence = Declaration.FIFTIES;
-        } else if (equalSuitNumber == hundreds) {
+        } else if (equalSuitNumber == HUNDREDS) {
             sequence = Declaration.HUNDREDS_SEQUENCE;
         }
 
-        return sequence;
+        return Optional.ofNullable(sequence);
     }
 }
